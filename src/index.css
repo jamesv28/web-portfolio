@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Sora", serif;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", serif;
+  font-style: normal;
+}
+
+/*
+darkPurple: 624E88
+purple: 8967B3
+yellow: #E6D9A2
+pink: #CB80AB
+green: #36BA98
+offwhite: #F4F8D3
+lightyellow: #FFE6A9;
+brown: #DEAA79
+*/

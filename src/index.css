@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 * {
-  font-family: "Sora", serif;
+  font-family: "Rethink Sans", serif;
+  font-optical-sizing: auto;
   font-style: normal;
+  background-color: #f0f0f0;
 }
 
 h1,
@@ -15,6 +17,23 @@ h6 {
   font-style: normal;
 }
 
+.hr-line {
+  width: 100%;
+  height: 4px;
+  background-color: #004242;
+}
+
+.red-text {
+  color: #f05a7e;
+}
+
+.green-text {
+  color: #36ba98;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
 /*
 darkPurple: 624E88
 purple: 8967B3
@@ -24,4 +43,6 @@ green: #36BA98
 offwhite: #F4F8D3
 lightyellow: #FFE6A9;
 brown: #DEAA79
+warmred: #F05A7E
+lightgray: #f0f0f0
 */

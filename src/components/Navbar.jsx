@@ -3,7 +3,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full">
-        <div className="mx-auto max-w-7xl px-8 py-4 flex flex-col sm:flex-row sm:gap-x-16 sm:items-center sm:py-8">
+        <div className="mx-auto max-w-7xl px-8 py-4 flex flex-col sm:flex-row sm:gap-x-16 sm:items-center sm:py-8 ">
           <h2 className="text-3xl font-bold small-caps">
             <span className="red-text">J </span>ames
             <span className="green-text">V</span>olmert

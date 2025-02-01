@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-7xl px-8;
+  }
+}
 * {
   font-family: "Rethink Sans", serif;
   font-optical-sizing: auto;

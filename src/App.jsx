@@ -1,14 +1,15 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/hero";
-import About from "./components/About";
+import Skills from "./components/Skills";
 
 function App() {
   return (
-    <>
+    <div className="bg-stone-100">
       <Navbar />
       <Hero />
-      <About />
-    </>
+      <div className="hr-line"></div>
+      <Skills />
+    </div>
   );
 }
 

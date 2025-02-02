@@ -62,7 +62,7 @@ h6 {
 
 .parallax {
   height: 350px;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

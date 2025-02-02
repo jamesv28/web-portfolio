@@ -3,7 +3,7 @@ import Pdf from "../assets/James_Resume.pdf";
 
 const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
   return (
-    <div className="max-w-full grid md:grid-cols-3 ">
+    <div className="max-w-full grid md:grid-cols-3 cursor-pointer">
       <div
         className="md:border-[4px] md:border-r-[2px] sm:border-b-[2px] border-black  flex items-center justify-center"
         id="linkedin"

@@ -6,7 +6,7 @@ const About = () => {
     <div className=" py-20 align-element" id="about">
       <SectionTitle text="About" />
       <div className="py-16 grid gap-8 md:grid-cols-2 ">
-        <div className="md:border-r border-black sm:border-0 px-4">
+        <div className="md:border-r-[2px] border-black sm:border-0 px-4">
           <p className="text-lg">
             As stated above, my name is James Volmert. I have been developing
             apps on and off for around 10 years. I have worked on a wide variety

@@ -55,9 +55,33 @@ h6 {
   transition: 0.5s all ease-in-out;
 }
 
+#github:hover {
+  background-color: #8967b3;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+}
+
+#resume:hover {
+  background-color: #36ba98;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+}
+
 .red {
   background-color: #f05a7e;
   color: #fff;
+  transition: 0.5s all ease-in-out;
+}
+
+.purple {
+  background-color: #8967b3;
+  color: white;
+  transition: 0.5s all ease-in-out;
+}
+
+.green {
+  background-color: #36ba98;
+  color: white;
   transition: 0.5s all ease-in-out;
 }
 

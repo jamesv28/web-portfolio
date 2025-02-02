@@ -4,10 +4,20 @@ import Footer from "./Footer";
 
 const Parent = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [gitIsHovered, setGitIsHovered] = useState(false);
+  const [resumeIsHovered, setResumeIsHovered] = useState(false);
   return (
     <>
-      <Projects isHovered={isHovered} />
-      <Footer setIsHovered={setIsHovered} />
+      <Projects
+        isHovered={isHovered}
+        gitIsHovered={gitIsHovered}
+        resumeIsHovered={resumeIsHovered}
+      />
+      <Footer
+        setIsHovered={setIsHovered}
+        setGitIsHovered={setGitIsHovered}
+        setResumeIsHovered={setResumeIsHovered}
+      />
     </>
   );
 };

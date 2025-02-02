@@ -5,9 +5,19 @@ import barrelImg from "../assets/barrel.jpg.webp";
 import programmingImg from "../assets/programming.avif";
 import computerImg from "../assets/computer.jpg";
 
-const Projects = ({ isHovered }) => {
+const Projects = ({ isHovered, gitIsHovered, resumeIsHovered }) => {
   return (
-    <div className={isHovered ? "red" : "white"}>
+    <div
+      className={
+        isHovered
+          ? "red"
+          : gitIsHovered
+          ? "purple"
+          : resumeIsHovered
+          ? "green"
+          : "white"
+      }
+    >
       <div className=" py-20 align-element" id="projects">
         <SectionTitle text="Projects" />
         <div className="py-16 grid gap-8 md:grid-cols-2 ">
@@ -104,6 +114,8 @@ const Projects = ({ isHovered }) => {
 
 Projects.propTypes = {
   isHovered: PropTypes.bool,
+  gitIsHovered: PropTypes.bool,
+  resumeIsHovered: PropTypes.bool,
 };
 
 export default Projects;

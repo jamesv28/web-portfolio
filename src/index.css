@@ -59,6 +59,15 @@ h6 {
 .gradient h2 {
   background: transparent;
 }
+
+.parallax {
+  height: 350px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("./assets/james2.png");
+}
 /*
 darkPurple: 624E88
 purple: 8967B3

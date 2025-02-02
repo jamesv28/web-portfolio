@@ -1,12 +1,9 @@
+import SectionTitle from "./SectionTitle";
+
 const About = () => {
   return (
-    <div className=" gradient">
-      <div className=" ">
-        <h2 className="text-center text-7xl">About</h2>
-      </div>
-      <div className="">
-        <h2>hello</h2>
-      </div>
+    <div className=" py-20 align-element">
+      <SectionTitle text="About" />
     </div>
   );
 };

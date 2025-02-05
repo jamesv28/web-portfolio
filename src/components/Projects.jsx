@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import SectionTitle from "./SectionTitle";
-import barrelImg from "../assets/barrel.jpg.webp";
+import barrelImg from "../assets/barrel2.jpg";
 import programmingImg from "../assets/programming.avif";
 import computerImg from "../assets/computer.jpg";
 

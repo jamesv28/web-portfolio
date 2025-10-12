@@ -20,8 +20,8 @@ const About = () => {
             try to make everything i do as accessible as possible for everyone.
           </p>
           <p className="mt-2 text-lg">
-            I am currently interested in blockchain and want to increase my
-            knowledge of native apps to brush up my existing tool belt.
+            I am currently interested in learning AI/ML, as well as native iOS
+            apps.
           </p>
         </div>
         <div>

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Pdf from "../assets/James_Resume.pdf";
+import Pdf from "../assets/JamesVolmert_Resume.pdf";
 
 const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
   return (

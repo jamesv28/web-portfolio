@@ -1,5 +1,9 @@
 const Parallax = () => {
-  return <section className="parallax"></section>;
+  return (
+    <div className="">
+      <section className="parallax"></section>
+    </div>
+  );
 };
 
 export default Parallax;

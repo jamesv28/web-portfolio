@@ -11,6 +11,7 @@ const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
         onMouseOut={() => setIsHovered(false)}
       >
         <a
+          className="w-full h-full flex items-center justify-center"
           href="https://www.linkedin.com/in/james-volmert-15301954"
           target="_blank"
         >
@@ -23,7 +24,10 @@ const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
         onMouseOver={() => setGitIsHovered(true)}
         onMouseOut={() => setGitIsHovered(false)}
       >
-        <a href="https://github.com/jamesv28">
+        <a
+          className="w-full h-full flex items-center justify-center"
+          href="https://github.com/jamesv28"
+        >
           <h2 className="text-4xl mt-5 mb-5">Github</h2>
         </a>
       </div>
@@ -33,7 +37,12 @@ const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
         onMouseOver={() => setResumeIsHovered(true)}
         onMouseOut={() => setResumeIsHovered(false)}
       >
-        <a href={Pdf} target="_blank" rel="noopener noreferrer">
+        <a
+          className="w-full h-full flex items-center justify-center"
+          href={Pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <h2 className="text-4xl mt-5 mb-5">Resume</h2>
         </a>
       </div>

@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="bg-indigo-500 py-24">
+    <div className="hero-bg py-24 justify-center items-center flex">
       <div className="flex justify-around w-full items-center ">
         <article>
           <h1 className="text-7xl font-bold tracking-wider">I'm James</h1>
@@ -18,7 +18,7 @@ const Hero = () => {
               <FaGithub className="h-8 w-8 text-slate-800 hover:text-white duration-300" />
             </a>
             <a
-              href="https://www.linkedin.com/in/james-volmert-15301954/"
+              href="https://www.linkedin.com/in/james-volmert-15301954"
               target="_blank"
             >
               <FaLinkedin className="h-8 w-8 text-slate-800 hover:text-white duration-300" />

@@ -11,7 +11,7 @@ const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
         onMouseOut={() => setIsHovered(false)}
       >
         <a
-          href="https://www.linkedin.com/in/james-volmert-15301954/"
+          href="https://www.linkedin.com/in/james-volmert-15301954"
           target="_blank"
         >
           <h2 className="text-4xl mt-5 mb-5">Linkedin</h2>

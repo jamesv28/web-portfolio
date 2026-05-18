@@ -27,6 +27,7 @@ const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
         <a
           className="w-full h-full flex items-center justify-center"
           href="https://github.com/jamesv28"
+          target="_blank"
         >
           <h2 className="text-4xl mt-5 mb-5">Github</h2>
         </a>

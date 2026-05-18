@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="hero-bg py-24 justify-center items-center flex">
+    <div className="hero-bg flex justify-center items-center ">
       <div className="flex justify-around w-full items-center ">
         <article>
           <h1 className="text-7xl font-bold tracking-wider">I'm James</h1>

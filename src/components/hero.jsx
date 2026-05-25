@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero-bg flex justify-center items-center ">
       <div className="flex justify-around w-full items-center ">
         <article>
-          <h1 className="text-7xl font-bold tracking-wider">I'm James</h1>
+          <h1 className="text-7xl font-bold tracking-wider">I&apos;m James</h1>
           <p className="mt-4 text-3xl text-white capitalize tracking-wide">
             Front-End Developer
           </p>

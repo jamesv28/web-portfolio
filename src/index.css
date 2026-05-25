@@ -46,7 +46,9 @@ h6 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-image: url("./assets/james2.png");
+  background-image:
+    linear-gradient(rgba(137, 103, 179, 0.4), rgba(137, 103, 179, 0.4)),
+    url("./assets/james2.png");
 }
 
 #linkedin:hover {

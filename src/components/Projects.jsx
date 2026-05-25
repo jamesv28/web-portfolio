@@ -12,10 +12,10 @@ const Projects = ({ isHovered, gitIsHovered, resumeIsHovered }) => {
         isHovered
           ? "red"
           : gitIsHovered
-          ? "purple"
-          : resumeIsHovered
-          ? "green"
-          : "white"
+            ? "purple"
+            : resumeIsHovered
+              ? "green"
+              : "white"
       }
     >
       <div className=" py-20 align-element" id="projects">

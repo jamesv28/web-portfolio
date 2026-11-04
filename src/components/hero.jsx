@@ -1,69 +1,13 @@
-import { useState } from "react";
 import {
   LuArrowDown,
   LuChevronRight,
   LuDownload,
   LuMessageSquare,
-  LuSlidersHorizontal,
-  LuTerminal,
 } from "react-icons/lu";
 import { heroTech, profile } from "../data";
 import { TONE_TEXT } from "../tones";
 
-const codeLines = [
-  <>
-    <span className="text-secondary">const</span>{" "}
-    <span className="text-primary">EngineeredMotion</span> = ({" "}
-    <span className="text-text-primary">canvas</span> ) =&gt; {"{"}
-  </>,
-  <>
-    <span className="pl-4 text-secondary">const</span>{" "}
-    <span className="text-text-primary">spring</span> = useSpring({" "}
-    <span className="text-text-primary">stiffness</span>:{" "}
-    <span className="text-tertiary">380</span>,{" "}
-    <span className="text-text-primary">damping</span>:{" "}
-    <span className="text-tertiary">26</span> {"});"}
-  </>,
-  <>
-    <span className="pl-4">return &lt;</span>
-    <span className="text-primary">FidelityViewport</span>{" "}
-    <span className="text-text-primary">token</span>={" "}
-    <span className="text-secondary">{'"subpixel"'}</span> /&gt;;
-  </>,
-  <>
-    <span>{"};"}</span>
-  </>,
-];
-
-const kpis = [
-  {
-    label: "LCP Metric",
-    value: "0.42s",
-    note: "Sub-500ms benchmark",
-    tone: "tertiary",
-  },
-  {
-    label: "Tree Shake",
-    value: "-41.2%",
-    note: "Zero dead-code bloat",
-    tone: "secondary",
-  },
-  {
-    label: "Tokens Sync",
-    value: "100%",
-    note: "Figma to TS AST",
-    tone: "primary",
-  },
-];
-
 const Hero = () => {
-  const [dispatched, setDispatched] = useState(false);
-
-  const handleDispatch = () => {
-    setDispatched(true);
-    window.setTimeout(() => setDispatched(false), 1500);
-  };
-
   return (
     <section
       id="home"

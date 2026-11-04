@@ -1,59 +1,65 @@
-import PropTypes from "prop-types";
-import Pdf from "../assets/JamesVolmert_Resume.pdf";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { LuArrowUp, LuMail } from "react-icons/lu";
+import { profile } from "../data";
 
-const Footer = ({ setIsHovered, setGitIsHovered, setResumeIsHovered }) => {
+const Footer = () => {
   return (
-    <div className="max-w-full grid md:grid-cols-3 cursor-pointer">
-      <div
-        className="md:border-[4px] md:border-r-[2px] sm:border-b-[2px] border-black  flex items-center justify-center"
-        id="linkedin"
-        onMouseOver={() => setIsHovered(true)}
-        onMouseOut={() => setIsHovered(false)}
-      >
-        <a
-          className="w-full h-full flex items-center justify-center"
-          href="https://www.linkedin.com/in/james-volmert-15301954"
-          target="_blank"
-        >
-          <h2 className="text-4xl mt-5 mb-5">Linkedin</h2>
+    <footer className="border-t border-white/[0.08] bg-canvas">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-4 pt-8 font-mono text-[12px] text-text-secondary md:px-8 lg:px-12">
+        <span>LATENCY: &lt;14MS // RENDERING ENGINE ACTIVE</span>
+        <a href="#home" className="flex items-center gap-1 transition-colors hover:text-primary">
+          Back to Top
+          <LuArrowUp className="h-4 w-4" aria-hidden="true" />
         </a>
       </div>
-      <div
-        className="md:border-[4px] sm:border-[4px] md:border-r-[2px] sm:border-b-[2px] sm:border-t-[2px] border-black  flex items-center justify-center"
-        id="github"
-        onMouseOver={() => setGitIsHovered(true)}
-        onMouseOut={() => setGitIsHovered(false)}
-      >
-        <a
-          className="w-full h-full flex items-center justify-center"
-          href="https://github.com/jamesv28"
-          target="_blank"
-        >
-          <h2 className="text-4xl mt-5 mb-5">Github</h2>
-        </a>
+
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-4 py-10 md:flex-row md:px-8 lg:px-12">
+        <div className="flex flex-col items-center gap-2 md:items-start">
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-std bg-primary font-mono text-[11px] text-text-primary">
+              {profile.brand}
+            </span>
+            <span className="t-headline-sm text-text-primary">{profile.name}</span>
+          </div>
+          <p className="t-caption text-text-secondary">
+            Bridging system design fidelity and architectural engineering rigor.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="rounded-full border border-white/[0.08] bg-white/[0.03] p-2.5 text-text-secondary transition-colors hover:border-secondary/40 hover:text-text-primary"
+          >
+            <FaGithub className="h-[18px] w-[18px]" />
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            className="rounded-full border border-white/[0.08] bg-white/[0.03] p-2.5 text-text-secondary transition-colors hover:border-secondary/40 hover:text-text-primary"
+          >
+            <FaLinkedin className="h-[18px] w-[18px]" />
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            aria-label="Email"
+            className="rounded-full border border-white/[0.08] bg-white/[0.03] p-2.5 text-text-secondary transition-colors hover:border-secondary/40 hover:text-text-primary"
+          >
+            <LuMail className="h-[18px] w-[18px]" />
+          </a>
+        </div>
+
+        <p className="t-caption text-text-secondary">
+          © {new Date().getFullYear()} {profile.name}. Engineered with precision.
+        </p>
       </div>
-      <div
-        className="md:border-[4px] border-r-[2px] sm:border-b-[2px] sm:border-t-[2px] sm:border-black md:border-black  flex items-center justify-center"
-        id="resume"
-        onMouseOver={() => setResumeIsHovered(true)}
-        onMouseOut={() => setResumeIsHovered(false)}
-      >
-        <a
-          className="w-full h-full flex items-center justify-center"
-          href={Pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="text-4xl mt-5 mb-5">Resume</h2>
-        </a>
-      </div>
-    </div>
+    </footer>
   );
 };
 
-Footer.propTypes = {
-  setIsHovered: PropTypes.func,
-  setGitIsHovered: PropTypes.func,
-  setResumeIsHovered: PropTypes.func,
-};
 export default Footer;

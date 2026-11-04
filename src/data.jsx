@@ -42,7 +42,11 @@ export const roles = [
       "Spearheaded the unified multi-tenant dashboard architecture powering over 4.8M monthly developer sessions. Engineered zero-runtime CSS tokens with automated sync from design artifacts, drastically eliminating UI drift across 14 discrete product teams.",
     metrics: [
       { value: "+52%", label: "Core Web Vitals LCP & INP", accent: "tertiary" },
-      { value: "120+", label: "Design System Adopted Engineers", accent: "secondary" },
+      {
+        value: "120+",
+        label: "Design System Adopted Engineers",
+        accent: "secondary",
+      },
       { value: "-48%", label: "Hydration Overhead Delta", accent: "primary" },
     ],
   },
@@ -64,7 +68,11 @@ export const roles = [
     metrics: [
       { value: "$1.8B+", label: "Annual Volume Handled", accent: "tertiary" },
       { value: "99.999%", label: "UI Widget Uptime Rate", accent: "secondary" },
-      { value: "18kb", label: "Standalone Bundle Footprint", accent: "primary" },
+      {
+        value: "18kb",
+        label: "Standalone Bundle Footprint",
+        accent: "primary",
+      },
     ],
   },
   {
@@ -84,8 +92,16 @@ export const roles = [
       "Engineered bespoke 3D WebGL experiences and real-time GPU particle renderers for global enterprise brands. Partnered directly with art directors to translate experimental spatial prototypes into high-performance web products.",
     metrics: [
       { value: "4x", label: "Awwwards Site of the Day", accent: "tertiary" },
-      { value: "60fps", label: "Guaranteed Low-End Mobile", accent: "secondary" },
-      { value: "100%", label: "OffscreenCanvas Multi-Threaded", accent: "primary" },
+      {
+        value: "60fps",
+        label: "Guaranteed Low-End Mobile",
+        accent: "secondary",
+      },
+      {
+        value: "100%",
+        label: "OffscreenCanvas Multi-Threaded",
+        accent: "primary",
+      },
     ],
   },
 ];
@@ -125,6 +141,6 @@ export const heroTech = [
   { name: "React 19", tone: "secondary" },
   { name: "TypeScript", tone: "primary" },
   { name: "Tailwind CSS", tone: "secondary" },
-  { name: "Next.js App Router", tone: "neutral" },
-  { name: "WebGL / Three.js", tone: "tertiary" },
+  { name: "Next.js", tone: "neutral" },
+  { name: "Vue.js", tone: "tertiary" },
 ];

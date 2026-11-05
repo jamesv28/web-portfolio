@@ -86,8 +86,8 @@ const Hero = () => {
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5" aria-hidden="true">
-              <span className="h-3 w-3 rounded-full bg-white/20" />
-              <span className="h-3 w-3 rounded-full bg-white/20" />
+              <span className="h-3 w-3 rounded-full bg-dot" />
+              <span className="h-3 w-3 rounded-full bg-dot" />
               <span className="h-3 w-3 rounded-full bg-tertiary/80" />
             </div>
             <div className="flex items-center gap-1.5 rounded-std bg-slate px-3 py-1 font-mono text-[12px] text-secondary">

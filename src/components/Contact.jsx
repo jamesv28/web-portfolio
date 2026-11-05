@@ -106,7 +106,7 @@ const Contact = () => {
                 <button
                   type="button"
                   onClick={copyEmail}
-                  className="flex shrink-0 items-center gap-1.5 rounded-std bg-white/[0.06] px-2.5 py-1 font-mono text-[12px] text-text-secondary transition-colors hover:bg-white/10 hover:text-text-primary"
+                  className="flex shrink-0 items-center gap-1.5 rounded-std bg-fill-strong px-2.5 py-1 font-mono text-[12px] text-text-secondary transition-colors hover:bg-fill-hover hover:text-text-primary"
                 >
                   {copied ? (
                     <LuCheck className="h-3.5 w-3.5" aria-hidden="true" />
@@ -157,7 +157,7 @@ const Contact = () => {
           </div>
 
           {/* Right: inquiry form */}
-          <div className="relative overflow-hidden rounded-container border border-white/[0.08] bg-slate/60 p-6 md:p-8 lg:col-span-7">
+          <div className="relative overflow-hidden rounded-container border border-hairline bg-slate/60 p-6 md:p-8 lg:col-span-7">
             <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="flex flex-col gap-2">
@@ -200,7 +200,7 @@ const Contact = () => {
                   {scopes.map((scope) => (
                     <label
                       key={scope.value}
-                      className="glow-hover flex cursor-pointer items-center gap-3 rounded-std border border-white/[0.08] bg-white/[0.03] px-3 py-2.5 text-[14px] text-text-primary hover:bg-white/[0.06]"
+                      className="glow-hover flex cursor-pointer items-center gap-3 rounded-std border border-hairline bg-fill px-3 py-2.5 text-[14px] text-text-primary hover:bg-fill-strong"
                     >
                       <input
                         type="radio"

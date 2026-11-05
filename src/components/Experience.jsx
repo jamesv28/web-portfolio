@@ -70,7 +70,7 @@ const Experience = () => {
             type="button"
             onClick={() => go(index - 1)}
             aria-label="Previous role"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-text-primary transition-all hover:scale-105 hover:border-primary/50 hover:text-primary active:scale-95"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline-strong bg-fill text-text-primary transition-all hover:scale-105 hover:border-primary/50 hover:text-primary active:scale-95"
           >
             <LuArrowLeft className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -90,7 +90,7 @@ const Experience = () => {
                 className={`h-2 rounded-full transition-all duration-300 ${
                   i === index
                     ? "w-8 bg-primary"
-                    : "w-2 bg-white/20 hover:bg-white/40"
+                    : "w-2 bg-dot hover:bg-dot-hover"
                 }`}
               />
             ))}
@@ -99,7 +99,7 @@ const Experience = () => {
             type="button"
             onClick={() => go(index + 1)}
             aria-label="Next role"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-text-primary transition-all hover:scale-105 hover:border-primary/50 hover:text-primary active:scale-95"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline-strong bg-fill text-text-primary transition-all hover:scale-105 hover:border-primary/50 hover:text-primary active:scale-95"
           >
             <LuArrowRight className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -108,7 +108,7 @@ const Experience = () => {
             onClick={() => setPlaying((p) => !p)}
             aria-label={playing ? "Pause autoplay" : "Play autoplay"}
             aria-pressed={playing}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-text-primary transition-all hover:scale-105 hover:border-secondary/50 hover:text-secondary active:scale-95"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline-strong bg-fill text-text-primary transition-all hover:scale-105 hover:border-secondary/50 hover:text-secondary active:scale-95"
           >
             {playing ? (
               <LuPause className="h-4 w-4" aria-hidden="true" />
@@ -139,7 +139,7 @@ const Experience = () => {
               key={role.company}
               aria-hidden={!active}
               aria-roledescription="slide"
-              className={`col-start-1 row-start-1 flex flex-col gap-6 rounded-container border border-white/[0.08] bg-slate/60 p-6 backdrop-blur-[12px] transition-[opacity,visibility] duration-700 ease-in-out md:flex-row md:p-8 ${
+              className={`col-start-1 row-start-1 flex flex-col gap-6 rounded-container border border-hairline bg-slate/60 p-6 backdrop-blur-[12px] transition-[opacity,visibility] duration-700 ease-in-out md:flex-row md:p-8 ${
                 active
                   ? "relative opacity-100"
                   : "pointer-events-none invisible opacity-0"
@@ -200,7 +200,7 @@ const Experience = () => {
                   {role.metrics.map((metric) => (
                     <div
                       key={metric.label}
-                      className="flex flex-col gap-1 rounded-std bg-white/[0.04] p-3"
+                      className="flex flex-col gap-1 rounded-std bg-fill p-3"
                     >
                       <dt className="t-caption text-text-secondary">
                         {metric.label}

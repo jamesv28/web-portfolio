@@ -2,7 +2,8 @@
 
 /*
  * Design tokens — mirrors DESIGN.md ("Luminescent Precision").
- * Hex values and rgba tiers are taken verbatim from the spec.
+ * Hex values and rgba tiers are taken verbatim from the spec (dark theme).
+ * Light theme overrides live in the [data-theme="light"] block below.
  */
 @theme {
   /* Neutral canvas + text */
@@ -13,6 +14,24 @@
   --color-text-tertiary: #64748b;
   --color-surface-highlight: rgba(30, 41, 59, 0.6);
   --color-outline-variant: rgba(255, 255, 255, 0.15);
+
+  /* Semantic fills, borders, and glass (theme-dependent) */
+  --color-hairline: rgba(255, 255, 255, 0.08);
+  --color-hairline-strong: rgba(255, 255, 255, 0.12);
+  --color-fill: rgba(255, 255, 255, 0.03);
+  --color-fill-strong: rgba(255, 255, 255, 0.06);
+  --color-fill-hover: rgba(255, 255, 255, 0.1);
+  --color-dot: rgba(255, 255, 255, 0.2);
+  --color-dot-hover: rgba(255, 255, 255, 0.4);
+  --color-glass-1: rgba(15, 23, 42, 0.65);
+  --color-glass-2: rgba(30, 41, 59, 0.75);
+  --color-glass-2-border: rgba(255, 255, 255, 0.14);
+  --color-field: rgba(15, 23, 42, 0.5);
+  --color-field-focus: rgba(15, 23, 42, 0.9);
+  --color-chip: rgba(15, 23, 42, 0.8);
+  --color-radio-ring: rgba(255, 255, 255, 0.2);
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-shadow-strong: rgba(0, 0, 0, 0.6);
 
   /* Accents */
   --color-primary: #6366f1; /* electric indigo: CTAs, focus, active */
@@ -37,6 +56,42 @@
   --animate-ping-slow: ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+/*
+ * Light theme. Accent text shades are darkened so cyan/emerald stay legible
+ * on white; indigo is deepened slightly for the same reason.
+ */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-canvas: #f4f6fb;
+  --color-slate: #ffffff;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748b;
+  --color-surface-highlight: rgba(241, 245, 249, 0.9);
+  --color-outline-variant: rgba(15, 23, 42, 0.15);
+
+  --color-hairline: rgba(15, 23, 42, 0.1);
+  --color-hairline-strong: rgba(15, 23, 42, 0.16);
+  --color-fill: rgba(15, 23, 42, 0.03);
+  --color-fill-strong: rgba(15, 23, 42, 0.06);
+  --color-fill-hover: rgba(15, 23, 42, 0.1);
+  --color-dot: rgba(15, 23, 42, 0.2);
+  --color-dot-hover: rgba(15, 23, 42, 0.4);
+  --color-glass-1: rgba(255, 255, 255, 0.75);
+  --color-glass-2: rgba(255, 255, 255, 0.9);
+  --color-glass-2-border: rgba(15, 23, 42, 0.12);
+  --color-field: rgba(255, 255, 255, 0.8);
+  --color-field-focus: rgba(255, 255, 255, 1);
+  --color-chip: rgba(255, 255, 255, 0.9);
+  --color-radio-ring: rgba(15, 23, 42, 0.3);
+  --color-shadow: rgba(15, 23, 42, 0.12);
+  --color-shadow-strong: rgba(15, 23, 42, 0.18);
+
+  --color-primary: #4f46e5;
+  --color-secondary: #0891b2;
+  --color-tertiary: #059669;
+}
+
 @layer base {
   html {
     background-color: var(--color-canvas);
@@ -52,6 +107,9 @@
     line-height: 1.625;
     -webkit-font-smoothing: antialiased;
     background-color: var(--color-canvas);
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
   }
 
   h1,
@@ -63,7 +121,7 @@
 
   ::selection {
     background: var(--color-primary);
-    color: var(--color-text-primary);
+    color: #f8fafc;
   }
 
   :focus-visible {
@@ -135,22 +193,22 @@
 
   /* Surface Tier 1 — static cards & containers */
   .surface-1 {
-    background: rgba(15, 23, 42, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--color-glass-1);
+    border: 1px solid var(--color-hairline);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px -2px var(--color-shadow);
   }
 
   /* Surface Tier 2 — floating, carousels, modals */
   .surface-2 {
-    background: rgba(30, 41, 59, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: var(--color-glass-2);
+    border: 1px solid var(--color-glass-2-border);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow:
-      0 12px 32px -4px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(255, 255, 255, 0.05);
+      0 12px 32px -4px var(--color-shadow-strong),
+      0 0 0 1px var(--color-fill-strong);
   }
 
   /* Hover & focus accentuation */
@@ -165,7 +223,7 @@
     box-shadow: 0 0 24px -4px rgba(99, 102, 241, 0.25);
   }
 
-  /* Primary CTA */
+  /* Primary CTA — white label on indigo in both themes */
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -174,7 +232,7 @@
     padding: 10px 20px;
     border-radius: var(--radius-std);
     background: var(--color-primary);
-    color: var(--color-text-primary);
+    color: #f8fafc;
     font-family: var(--font-display);
     font-size: 14px;
     font-weight: 600;
@@ -199,8 +257,8 @@
     gap: 0.5rem;
     padding: 10px 20px;
     border-radius: var(--radius-std);
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--color-fill);
+    border: 1px solid var(--color-hairline-strong);
     color: var(--color-text-primary);
     font-family: var(--font-display);
     font-size: 14px;
@@ -221,8 +279,8 @@
     height: 28px;
     padding: 0 10px;
     border-radius: 6px;
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--color-chip);
+    border: 1px solid var(--color-hairline);
     font-family: var(--font-mono);
     font-size: 12px;
     font-weight: 500;
@@ -239,8 +297,8 @@
     width: 100%;
     padding: 12px 16px;
     border-radius: var(--radius-std);
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-field);
+    border: 1px solid var(--color-hairline-strong);
     color: var(--color-text-primary);
     font-family: var(--font-body);
     font-size: 16px;
@@ -252,7 +310,7 @@
   .field:focus {
     outline: none;
     border-color: var(--color-primary);
-    background: rgba(15, 23, 42, 0.9);
+    background: var(--color-field-focus);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
   }
 
@@ -273,7 +331,7 @@
     height: 18px;
     margin: 0;
     border-radius: 50%;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid var(--color-radio-ring);
     background: transparent;
     display: grid;
     place-content: center;

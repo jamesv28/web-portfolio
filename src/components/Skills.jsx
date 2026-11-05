@@ -35,7 +35,7 @@ const Skills = () => {
             >
               <div className="flex flex-col gap-4">
                 <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-std border border-white/[0.08] bg-surface-highlight transition-transform duration-300 group-hover:scale-110 ${TONE_TEXT[skill.accent]}`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-std border border-hairline bg-surface-highlight transition-transform duration-300 group-hover:scale-110 ${TONE_TEXT[skill.accent]}`}
                 >
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
@@ -49,7 +49,7 @@ const Skills = () => {
                   <span className={TONE_TEXT[skill.accent]}>{skill.mastery}%</span>
                 </div>
                 <div
-                  className="h-1.5 w-full overflow-hidden rounded-full bg-white/[0.06]"
+                  className="h-1.5 w-full overflow-hidden rounded-full bg-fill-strong"
                   role="meter"
                   aria-label={`${skill.title} mastery`}
                   aria-valuemin={0}

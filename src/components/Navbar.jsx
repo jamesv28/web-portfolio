@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { LuMoon, LuSun } from "react-icons/lu";
 import { navLinks, profile } from "../data";
+import { useTheme } from "../theme";
 
 // Highlights the nav link whose section currently sits near the top of the viewport.
 const useActiveSection = (ids) => {
@@ -27,13 +29,15 @@ const useActiveSection = (ids) => {
 
 const Navbar = () => {
   const active = useActiveSection(navLinks.map((link) => link.id));
+  const { theme, toggle: toggleTheme } = useTheme();
+  const isLight = theme === "light";
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-canvas/75 backdrop-blur-[20px]">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-canvas/75 backdrop-blur-[20px]">
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between gap-4 px-4 md:px-8 lg:px-12">
         <div className="flex shrink-0 items-center gap-4">
           <a href="#home" className="flex items-center gap-3 rounded-std">
-            <span className="flex h-8 w-8 items-center justify-center rounded-std bg-primary font-mono text-[13px] font-medium text-text-primary">
+            <span className="flex h-8 w-8 items-center justify-center rounded-std bg-primary font-mono text-[13px] font-medium text-white">
               {profile.brand}
             </span>
             <span className="t-headline-sm hidden text-text-primary sm:inline">
@@ -70,6 +74,19 @@ const Navbar = () => {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+            title={isLight ? "Switch to dark mode" : "Switch to light mode"}
+            className="rounded-full border border-hairline bg-fill p-2 text-text-secondary transition-colors hover:border-secondary/40 hover:text-text-primary"
+          >
+            {isLight ? (
+              <LuMoon className="h-[18px] w-[18px]" aria-hidden="true" />
+            ) : (
+              <LuSun className="h-[18px] w-[18px]" aria-hidden="true" />
+            )}
+          </button>
           <a
             href={profile.github}
             target="_blank"

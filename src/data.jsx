@@ -26,20 +26,20 @@ export const navLinks = [
 
 export const roles = [
   {
-    period: "2023 — Present",
-    location: "San Francisco, CA (Remote)",
-    title: "Staff UI & Systems Engineer",
-    company: "ScaleStack Cloud Engine",
+    period: "2021 — 2025",
+    location: "Denver, CO (Remote)",
+    title: "Front-End Developer",
+    company: "Versatrans",
     accent: "secondary",
     stack: [
-      { name: "React 19", tone: "secondary" },
-      { name: "Turborepo", tone: "neutral" },
+      { name: "Vue.js", tone: "secondary" },
+      { name: "Pinia", tone: "neutral" },
       { name: "WebSockets", tone: "primary" },
-      { name: "Rust/Wasm", tone: "tertiary" },
+      { name: "Vuex", tone: "tertiary" },
     ],
     caseStudy: "Inspect architectural case study",
     summary:
-      "Spearheaded the unified multi-tenant dashboard architecture powering over 4.8M monthly developer sessions. Engineered zero-runtime CSS tokens with automated sync from design artifacts, drastically eliminating UI drift across 14 discrete product teams.",
+      "Spearheaded the entire distillery management systems for Luca Mariano Distillery, including overall management of inventory and location management. Also dealt with updating and maintaining the UI for the parent company portal with the intention of better usability for customers and increase insales",
     metrics: [
       { value: "+52%", label: "Core Web Vitals LCP & INP", accent: "tertiary" },
       {
@@ -51,20 +51,20 @@ export const roles = [
     ],
   },
   {
-    period: "2021 — 2023",
-    location: "New York, NY",
-    title: "Lead Front-End Architect",
-    company: "PulsePay Financial Infrastructure",
+    period: "2018 — 2020",
+    location: "Denver, CO",
+    title: "Front-End Developer",
+    company: "Convercent",
     accent: "primary",
     stack: [
-      { name: "TypeScript", tone: "secondary" },
-      { name: "Tailwind CSS", tone: "primary" },
-      { name: "GraphQL", tone: "tertiary" },
-      { name: "Cypress E2E", tone: "neutral" },
+      { name: "ASP.NET", tone: "secondary" },
+      { name: "Bootstrap", tone: "primary" },
+      { name: "Knockout.js", tone: "tertiary" },
+      { name: "React", tone: "neutral" },
     ],
     caseStudy: "Inspect checkout flow telemetry",
     summary:
-      "Architected an embedded payment element widget rendered across thousands of external merchant checkouts. Implemented hyper-strict sandbox encapsulation with zero-data-leak isolation and accessible WCAG 2.1 AAA keyboard primitives.",
+      "Implemented usability and accessibility improvements to the Convercent platform, including a complete overhaul of the checkout flow and a new design system for internal and external use. Also, worked closely with other teams for best-case standards of implementing accessibility into new features.  Finally, began transitioning from Knockout.js to React.",
     metrics: [
       { value: "$1.8B+", label: "Annual Volume Handled", accent: "tertiary" },
       { value: "99.999%", label: "UI Widget Uptime Rate", accent: "secondary" },
@@ -76,20 +76,20 @@ export const roles = [
     ],
   },
   {
-    period: "2019 — 2021",
-    location: "Remote / London",
-    title: "Lead Design Technologist",
-    company: "Hyperion Creative Lab",
+    period: "2016 — 2018",
+    location: "Denver, CO",
+    title: "Application Developer/ Mobile App Developer",
+    company: "DaVita",
     accent: "tertiary",
     stack: [
-      { name: "Three.js", tone: "tertiary" },
-      { name: "GLSL Shaders", tone: "secondary" },
-      { name: "GSAP Motion", tone: "primary" },
-      { name: "Web Audio", tone: "neutral" },
+      { name: "React", tone: "tertiary" },
+      { name: "Swift", tone: "secondary" },
+      { name: "Java", tone: "primary" },
+      { name: "Redux", tone: "neutral" },
     ],
     caseStudy: "View award-winning work",
     summary:
-      "Engineered bespoke 3D WebGL experiences and real-time GPU particle renderers for global enterprise brands. Partnered directly with art directors to translate experimental spatial prototypes into high-performance web products.",
+      "Began working on the mobile developer team for increasing usability and accessibility for the telehealth app.  Also, worked with the UI design team to overhaul the apps for both native iOS and android devices. Switched to the web team to work on the internal web portal for the company, which included an overhaul of the existing code base as well as adding new features for both doctors and customers to actively engage in the apps.",
     metrics: [
       { value: "4x", label: "Awwwards Site of the Day", accent: "tertiary" },
       {

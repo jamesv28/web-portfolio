@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { LuCheck, LuCheckCheck, LuCopy, LuMail, LuSend } from "react-icons/lu";
+import {
+  LuCheck,
+  LuCheckCheck,
+  LuCopy,
+  LuMail,
+  LuSend,
+  LuDock,
+} from "react-icons/lu";
 import { profile } from "../data";
 
 const scopes = [
@@ -52,9 +59,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mx-auto max-w-[1200px] px-4 py-24 md:px-8 lg:px-12">
+    <section
+      id="contact"
+      className="mx-auto max-w-[1200px] px-4 py-24 md:px-8 lg:px-12"
+    >
       <div className="surface-2 relative overflow-hidden rounded-display p-6 md:p-10">
-        <div className="canvas-glow -left-16 -top-12 h-96 w-96 bg-primary/15 blur-[100px]" aria-hidden="true" />
+        <div
+          className="canvas-glow -left-16 -top-12 h-96 w-96 bg-primary/15 blur-[100px]"
+          aria-hidden="true"
+        />
 
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Left: context + direct channels */}
@@ -64,20 +77,28 @@ const Contact = () => {
                 <span className="t-label-code uppercase tracking-wider text-secondary">
                   04 // INITIATE DIALOGUE
                 </span>
-                <span className="h-px w-10 bg-outline-variant" aria-hidden="true" />
+                <span
+                  className="h-px w-10 bg-outline-variant"
+                  aria-hidden="true"
+                />
               </div>
               <h2 className="t-headline-lg text-text-primary">
                 Let&apos;s construct something exceptional.
               </h2>
               <p className="text-text-secondary">
-                Whether you need a principal architect for a next-gen greenfield client application, or a design system overhaul, my inbox is direct.
+                Whether you need a principal architect for a next-gen greenfield
+                client application, or a design system overhaul, my inbox is
+                direct.
               </p>
             </div>
 
             <div className="flex flex-col gap-2">
               <div className="surface-1 flex items-center justify-between gap-3 rounded-std px-4 py-3">
                 <div className="flex min-w-0 items-center gap-3">
-                  <LuMail className="h-5 w-5 shrink-0 text-secondary" aria-hidden="true" />
+                  <LuMail
+                    className="h-5 w-5 shrink-0 text-secondary"
+                    aria-hidden="true"
+                  />
                   <span className="truncate font-mono text-[14px] text-text-primary select-all">
                     {profile.email}
                   </span>
@@ -87,7 +108,11 @@ const Contact = () => {
                   onClick={copyEmail}
                   className="flex shrink-0 items-center gap-1.5 rounded-std bg-white/[0.06] px-2.5 py-1 font-mono text-[12px] text-text-secondary transition-colors hover:bg-white/10 hover:text-text-primary"
                 >
-                  {copied ? <LuCheck className="h-3.5 w-3.5" aria-hidden="true" /> : <LuCopy className="h-3.5 w-3.5" aria-hidden="true" />}
+                  {copied ? (
+                    <LuCheck className="h-3.5 w-3.5" aria-hidden="true" />
+                  ) : (
+                    <LuCopy className="h-3.5 w-3.5" aria-hidden="true" />
+                  )}
                   {copied ? "Copied!" : "Copy"}
                 </button>
               </div>
@@ -116,14 +141,17 @@ const Contact = () => {
                   download
                   className="surface-1 glow-hover flex items-center justify-center gap-2 rounded-std px-3 py-2.5 font-mono text-[12px] text-text-primary"
                 >
-                  <LuCheckCheck className="h-4 w-4" aria-hidden="true" />
+                  <LuDock className="h-4 w-4" aria-hidden="true" />
                   Resume
                 </a>
               </div>
             </div>
 
             <div className="flex items-center gap-2 font-mono text-[12px] text-tertiary">
-              <span className="h-2 w-2 rounded-full bg-tertiary" aria-hidden="true" />
+              <span
+                className="h-2 w-2 rounded-full bg-tertiary"
+                aria-hidden="true"
+              />
               Typical initial response time: {profile.responseTime}
             </div>
           </div>
@@ -133,7 +161,9 @@ const Contact = () => {
             <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="contactName" className="label-caps">Your Name</label>
+                  <label htmlFor="contactName" className="label-caps">
+                    Your Name
+                  </label>
                   <input
                     id="contactName"
                     name="name"
@@ -141,13 +171,15 @@ const Contact = () => {
                     required
                     value={form.name}
                     onChange={update("name")}
-                    placeholder="Elena Rostova"
+                    placeholder="Eleanor Rigby"
                     autoComplete="name"
                     className="field"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="contactEmail" className="label-caps">Email Address</label>
+                  <label htmlFor="contactEmail" className="label-caps">
+                    Email Address
+                  </label>
                   <input
                     id="contactEmail"
                     name="email"
@@ -155,7 +187,7 @@ const Contact = () => {
                     required
                     value={form.email}
                     onChange={update("email")}
-                    placeholder="elena@company.com"
+                    placeholder="eleanor@company.com"
                     autoComplete="email"
                     className="field"
                   />
@@ -185,7 +217,9 @@ const Contact = () => {
               </fieldset>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="contactMsg" className="label-caps">Project Particulars</label>
+                <label htmlFor="contactMsg" className="label-caps">
+                  Project Particulars
+                </label>
                 <textarea
                   id="contactMsg"
                   name="message"

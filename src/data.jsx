@@ -10,7 +10,7 @@ export const profile = {
   brand: "JV",
   headline: "Front-End Engineer",
   // TODO: replace with your real contact email.
-  email: "hello@example.com",
+  email: "james.volmert@gmail.com",
   github: "https://github.com/jamesv28",
   linkedin: "https://www.linkedin.com/in/james-volmert-15301954",
   resumeUrl,

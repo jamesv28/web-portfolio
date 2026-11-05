@@ -53,7 +53,7 @@ export const roles = [
   {
     period: "2018 — 2020",
     location: "Denver, CO",
-    title: "Front-End Developer",
+    title: "Front-End Engineer",
     company: "Convercent",
     accent: "primary",
     stack: [

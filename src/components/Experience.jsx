@@ -1,12 +1,37 @@
-import { useState } from "react";
-import { LuArrowLeft, LuArrowRight, LuArrowUpRight } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import {
+  LuArrowLeft,
+  LuArrowRight,
+  LuPause,
+  LuPlay,
+} from "react-icons/lu";
 import { roles } from "../data";
 import { TONE_PILL, TONE_TEXT } from "../tones";
 
+const AUTOPLAY_DELAY_MS = 5000;
+
 const Experience = () => {
   const [index, setIndex] = useState(0);
+  const [hovered, setHovered] = useState(false);
+  const [focused, setFocused] = useState(false);
+  // Autoplay starts on unless the user prefers reduced motion.
+  const [playing, setPlaying] = useState(
+    () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
   const count = roles.length;
+  const paused = !playing || hovered || focused;
+
   const go = (next) => setIndex((next + count) % count);
+
+  // Advance on a 5s timer. Any index change (manual or auto) restarts the timer.
+  useEffect(() => {
+    if (paused) return undefined;
+    const timer = window.setTimeout(
+      () => setIndex((current) => (current + 1) % count),
+      AUTOPLAY_DELAY_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [index, paused, count]);
 
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") go(index - 1);
@@ -78,6 +103,19 @@ const Experience = () => {
           >
             <LuArrowRight className="h-5 w-5" aria-hidden="true" />
           </button>
+          <button
+            type="button"
+            onClick={() => setPlaying((p) => !p)}
+            aria-label={playing ? "Pause autoplay" : "Play autoplay"}
+            aria-pressed={playing}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-text-primary transition-all hover:scale-105 hover:border-secondary/50 hover:text-secondary active:scale-95"
+          >
+            {playing ? (
+              <LuPause className="h-4 w-4" aria-hidden="true" />
+            ) : (
+              <LuPlay className="h-4 w-4" aria-hidden="true" />
+            )}
+          </button>
         </div>
       </div>
 
@@ -85,10 +123,14 @@ const Experience = () => {
       <div
         className="mt-10 grid focus:outline-none"
         onKeyDown={handleKeyDown}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
         tabIndex={0}
         aria-roledescription="carousel"
         aria-label="Career roles"
-        aria-live="polite"
+        aria-live={playing ? "off" : "polite"}
       >
         {roles.map((role, i) => {
           const active = i === index;
@@ -97,10 +139,10 @@ const Experience = () => {
               key={role.company}
               aria-hidden={!active}
               aria-roledescription="slide"
-              className={`col-start-1 row-start-1 flex flex-col gap-6 rounded-container border border-white/[0.08] bg-slate/60 p-6 backdrop-blur-[12px] transition-all duration-500 ease-out md:flex-row md:p-8 ${
+              className={`col-start-1 row-start-1 flex flex-col gap-6 rounded-container border border-white/[0.08] bg-slate/60 p-6 backdrop-blur-[12px] transition-[opacity,visibility] duration-700 ease-in-out md:flex-row md:p-8 ${
                 active
-                  ? "relative translate-x-0 opacity-100"
-                  : "pointer-events-none invisible translate-x-6 opacity-0"
+                  ? "relative opacity-100"
+                  : "pointer-events-none invisible opacity-0"
               }`}
             >
               {/* Identity + stack */}

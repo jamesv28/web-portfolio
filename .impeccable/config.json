@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/components/Hero.jsx"
+        ],
+        "createdAt": "2026-11-05T01:37:42.378Z",
+        "reason": "Sanctioned: the gradient on 'pixel-perfect' is in the user-supplied reference screenshot (screen.png); intentional design, not AI decoration"
+      }
+    ]
+  }
+}
